@@ -34,7 +34,8 @@ pipeline {
                 sh 'pwd'
 
                 // Execute Helm upgrade command to install or upgrade the Helm chart
-                sh '/usr/local/bin/helm upgrade --install petclinic-app <existing-release-name> --set image.repository=registry.hub.docker.com/dibangoxx/petclinic --set image.tag=1'
+                sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic --set image.repository=registry.hub.docker.com/dibangoxx/petclinic --set image.tag=1'
+'
 
             }
         }
